@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://51l60w8rc7wi"]
+
+[ext_resource type="Texture2D" uid="uid://b5hb2f4kp8i0i" path="res://sprites/NPC.png" id="1_7soh5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7soh5"]
+radius = 30.0
+
+[node name="obstacles" type="Node2D" unique_id=1460928329]
+
+[node name="Npc" type="Sprite2D" parent="." unique_id=1713234049]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_7soh5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1476708359]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=530062490]
+position = Vector2(-9, -10)
+shape = SubResource("CircleShape2D_7soh5")

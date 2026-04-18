@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bajatexb2rqjx"]
+
+[ext_resource type="Script" uid="uid://c1uirntgb8tcp" path="res://scripts/controllers/sunny.gd" id="1_chw40"]
+[ext_resource type="Texture2D" uid="uid://c0dehbjg83xa6" path="res://sprites/Sunny_normal.png" id="1_vlm0g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w8psw"]
+radius = 29.88
+
+[node name="Sunny" type="Node2D" unique_id=1648387686]
+script = ExtResource("1_chw40")
+
+[node name="SunnyNormal" type="Sprite2D" parent="." unique_id=1143430381]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_vlm0g")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=781245608]
+limit_left = 0
+limit_top = 720
+limit_right = 5000
+limit_bottom = 0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=62297052]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=302168347]
+position = Vector2(6, -3)
+shape = SubResource("CircleShape2D_w8psw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

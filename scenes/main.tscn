@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bg4ojhhly3405"]
+
+[ext_resource type="Texture2D" uid="uid://swcvumuo67kb" path="res://sprites/BG.png" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bajatexb2rqjx" path="res://scenes/sunny.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://51l60w8rc7wi" path="res://scenes/obstacles.tscn" id="3_sugp2"]
+
+[node name="main" type="Node2D" unique_id=759536073]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=950720217]
+position = Vector2(2500, 360)
+texture = ExtResource("1_o5qli")
+
+[node name="Sunny" parent="." unique_id=1648387686 instance=ExtResource("2_0wfyh")]
+position = Vector2(361, 296)
+
+[node name="obstacles" parent="." unique_id=1460928329 instance=ExtResource("3_sugp2")]
+position = Vector2(1107, 319)
