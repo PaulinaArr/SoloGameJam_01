@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://3bddo20r3hyc"]
 
 [ext_resource type="Texture2D" uid="uid://dggw3ad2yrtu3" path="res://sprites/Feather.png" id="1_f7sq6"]
+[ext_resource type="Script" uid="uid://nmujipq5e6o7" path="res://scripts/controllers/feather.gd" id="1_uauuc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uauuc"]
 radius = 24.0
 
 [node name="feather" type="Node2D" unique_id=1615300713]
 
-[node name="Feather" type="Sprite2D" parent="." unique_id=727691956]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=602105413 groups=["feathers"]]
+script = ExtResource("1_uauuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=425810276]
+shape = SubResource("CircleShape2D_uauuc")
+
+[node name="Feather" type="Sprite2D" parent="StaticBody2D" unique_id=727691956]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_f7sq6")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=629446585]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=425810276]
-shape = SubResource("CircleShape2D_uauuc")

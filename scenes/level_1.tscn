@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://3d745ff2p7wp"]
+
+[ext_resource type="Texture2D" uid="uid://swcvumuo67kb" path="res://sprites/BG.png" id="1_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://51l60w8rc7wi" path="res://scenes/obstacles.tscn" id="2_4nkto"]
+[ext_resource type="PackedScene" uid="uid://3bddo20r3hyc" path="res://scenes/feather.tscn" id="3_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://0gp8ou1lfkaw" path="res://scenes/aegis.tscn" id="4_pa8r4"]
+
+[node name="Level 1" type="Node2D" unique_id=1306483141]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=394996505]
+position = Vector2(2500, 360)
+texture = ExtResource("1_5xbjy")
+
+[node name="obstacles" parent="." unique_id=1460928329 instance=ExtResource("2_4nkto")]
+z_index = 5
+position = Vector2(1020, 138)
+
+[node name="feather" parent="." unique_id=1615300713 instance=ExtResource("3_fcfvj")]
+z_index = 5
+position = Vector2(4867, 362)
+
+[node name="obstacles2" parent="." unique_id=387434592 instance=ExtResource("4_pa8r4")]
+z_index = 5
+position = Vector2(1560, 369)
+
+[node name="obstacles3" parent="." unique_id=318256341 instance=ExtResource("2_4nkto")]
+z_index = 5
+position = Vector2(1935, 131)
+
+[node name="obstacles4" parent="." unique_id=550762980 instance=ExtResource("2_4nkto")]
+z_index = 5
+position = Vector2(2411, 378)
+
+[node name="obstacles5" parent="." unique_id=584923970 instance=ExtResource("4_pa8r4")]
+z_index = 5
+position = Vector2(2939, 144)
+
+[node name="obstacles6" parent="." unique_id=557235327 instance=ExtResource("4_pa8r4")]
+z_index = 5
+position = Vector2(3297, 598)
+
+[node name="obstacles7" parent="." unique_id=1921280844 instance=ExtResource("2_4nkto")]
+z_index = 5
+position = Vector2(3943, 329)
+
+[node name="obstacles8" parent="." unique_id=1959775449 instance=ExtResource("2_4nkto")]
+z_index = 5
+position = Vector2(3716, 609)
+
+[node name="obstacles9" parent="." unique_id=250523717 instance=ExtResource("2_4nkto")]
+z_index = 5
+position = Vector2(4628, 112)
+
+[node name="obstacles10" parent="." unique_id=159962145 instance=ExtResource("4_pa8r4")]
+z_index = 5
+position = Vector2(4767, 586)
+
+[node name="obstacles11" parent="." unique_id=111060558 instance=ExtResource("4_pa8r4")]
+z_index = 5
+position = Vector2(864, 584)

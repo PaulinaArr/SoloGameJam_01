@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://0gp8ou1lfkaw"]
+
+[ext_resource type="Texture2D" uid="uid://cbpflvbka3of2" path="res://sprites/Aegis.png" id="1_iwcrw"]
+[ext_resource type="Script" uid="uid://drsh8atbhyes5" path="res://scripts/controllers/aegis.gd" id="1_ytrve"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7soh5"]
+radius = 57.93
+
+[sub_resource type="Animation" id="Animation_iwcrw"]
+resource_name = "Aegis"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.8666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34906584, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ytrve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytrve"]
+_data = {
+&"Aegis": SubResource("Animation_iwcrw"),
+&"RESET": SubResource("Animation_ytrve")
+}
+
+[node name="obstacles" type="Node2D" unique_id=1460928329]
+script = ExtResource("1_ytrve")
+
+[node name="Npc" type="Sprite2D" parent="." unique_id=1713234049]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_iwcrw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1476708359 groups=["obstacles"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=530062490]
+position = Vector2(-38, 19)
+shape = SubResource("CircleShape2D_7soh5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2138758402]
+libraries/ = SubResource("AnimationLibrary_ytrve")
